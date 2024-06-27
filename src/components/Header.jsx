@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import amazonLogo from '../assets/logo.png';  // Ensure this is the correct path to your logo
-import usFlag from '../assets/usflag.jpg';  // Ensure this is the correct path to your flag
+import amazonLogo from '../assets/logo.png';  
+import usFlag from '../assets/usflag.jpg';  
 
 const Header = () => {
   return (
