@@ -4,6 +4,7 @@ import cardImg6 from '../assets/cardImg6.jpg';
 import cardImg7 from '../assets/cardImg7.jpg';
 import cardImg8 from '../assets/cardImg8.jpg';
 import "../css/cards.css"
+
 const Cards2 = () => {
   return (
     <section className="product-comp">
