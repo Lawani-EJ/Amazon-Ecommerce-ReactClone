@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import amazonLogo from '../assets/logo.png';  
+import amazonLogo from '../assets/logo.png';
 import usFlag from '../assets/usflag.jpg';  
 
 const Header = () => {
@@ -32,7 +33,9 @@ const Header = () => {
           <img src={usFlag} alt="Language" className="img-fluid me-2" style={{ width: '35px', height: '35px' }} />
           <i className="bi bi-caret-down-fill me-3"></i>
           <div className="me-3">
-            <span className="d-block">Hello, Sign in</span>
+            <Link to="/login" className="text-white">
+              <span className="d-block">Hello, Sign in</span>
+            </Link>
             <div className="d-flex align-items-center">
               <span>Accounts & Lists</span>
               <i className="bi bi-caret-down-fill"></i>
