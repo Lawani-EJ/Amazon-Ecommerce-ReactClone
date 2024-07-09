@@ -1,25 +1,28 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
-import  Carousel from './components/Carousel';
-import Navbar from './components/Navbar';
-import Cards from './components/Cards';
-import Sliders from './components/Sliders';
-import Sliders2 from './components/Sliders2';
-import Cards2 from './components/cards2';
+import Homepage from './components/Homepage';
+import Signup from './components/Signup';
+import Login from './components/Login';
+import Product from './components/Product';
 
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Header/>
-      <Navbar/>
-      <Carousel/>
-      <Cards/>
-      <Sliders/>
-      <Sliders2/>
-      <Cards2/>
-    </div>
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/product/:id" element={<Product />} />
+    </Routes>
   );
-}
+};
 
-export default App;
+const AppWrapper = () => {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+};
+
+export default AppWrapper;
