@@ -112,3 +112,46 @@ header {
     font-size: 15px;
     line-height: 1.3rem;
 }
+
+.item-image-parent {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .item-list-vertical {
+    flex: 1;
+  }
+  
+  .item-image-main {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img-thumbnail {
+    max-width: 100%;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .main-info {
+    margin-bottom: 20px;
+  }
+  
+  .star-rating {
+    font-size: 24px;
+    color: #FFD700;
+  }
+  
+  #price {
+    font-weight: bold;
+  }
+  
+  .thumb-box img {
+    cursor: pointer;
+  }
+  
