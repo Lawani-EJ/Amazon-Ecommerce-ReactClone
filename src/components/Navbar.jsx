@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Navbar = () => {
@@ -32,6 +33,9 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">Sell</a>
+            </li>
+            <li className="nav-item">
+              <Link to="/merchant" className="nav-link">Merchant</Link>
             </li>
           </ul>
           <span className="navbar-text text-white ms-lg-3">
