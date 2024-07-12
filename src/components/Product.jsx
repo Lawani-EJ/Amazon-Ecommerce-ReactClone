@@ -6,7 +6,7 @@ import Header from './Header';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-const Product = () => {
+const Product = ({ onAddToCart, cartCount }) => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
 
@@ -21,12 +21,13 @@ const Product = () => {
   };
 
   const handleAddToCart = () => {
+    onAddToCart(quantity);
     alert(`Added ${quantity} items to cart`);
   };
 
   return (
     <>
-      <Header />
+      <Header cartCount={cartCount} />
       <Navbar />
       <div className="container mt-5">
         <section id="product-info" className="row">
@@ -87,11 +88,11 @@ const Product = () => {
 
                 <div className="description mb-3">
                   <ul>
-                    <li>Care Instructions: Machine Wash</li>
-                    <li>Fit Type: Classic Fit</li>
-                    <li>Color name: Black-White</li>
-                    <li>Material: Cotton</li>
-                    <li>Pattern: Solid</li>
+                    <li>Brand Jabra</li>
+                    <li>Colour Black</li>
+                    <li>Ear placement On Ear</li>
+                    <li>Noise control Sound Isolation</li>
+                    <li>Model name Evolve2 65</li>
                   </ul>
                 </div>
 
@@ -116,6 +117,6 @@ const Product = () => {
       <Footer />
     </>
   );
-}
+};
 
 export default Product;
