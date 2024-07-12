@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import amazonLogo from '../assets/logo.png';
 import usFlag from '../assets/usflag.jpg';  
 
-const Header = () => {
+const Header = ({ cartCount }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -46,18 +46,17 @@ const Header = () => {
             <span>& Orders</span>
           </div>
           <div className="d-flex align-items-center position-relative">
-  <i className="bi bi-cart-plus"></i>
-  <span className="ms-2">Cart</span>
-  <span className="badge bg-warning rounded-pill position-absolute top-0 start-100 translate-middle">
-    3 
-    <span className="visually-hidden">items in cart</span>
-  </span>
-</div>
-
+            <i className="bi bi-cart-plus"></i>
+            <span className="ms-2">Cart</span>
+            <span className="badge bg-warning rounded-pill position-absolute top-0 start-100 translate-middle">
+              {cartCount}
+              <span className="visually-hidden">items in cart</span>
+            </span>
+          </div>
         </div>
       </div>
     </nav>
   );
-}
+};
 
 export default Header;
