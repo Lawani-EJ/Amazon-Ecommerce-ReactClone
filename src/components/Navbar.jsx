@@ -1,22 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
 const Navbar = () => {
-  const navbarStyle = {
-    backgroundColor: 'rgb(35,47,62)'
-  };
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
+
+  const handleCloseOffcanvas = () => setShowOffcanvas(false);
+  const handleShowOffcanvas = () => setShowOffcanvas(true);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark" style={navbarStyle}>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
-        <a className="navbar-brand text-white" href="#">
-          <i className="bi bi-list me-2"></i>
-          <span>All</span>
-        </a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        <Button variant="primary" onClick={handleShowOffcanvas} className='btn-warning bi-list'>
+          All
+        </Button>
+        <Offcanvas show={showOffcanvas} onHide={handleCloseOffcanvas}>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title className='bi bi-person-circle'>
+              <Link to="/login">Hello Sign in</Link>
+              </Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <ul className="navbar-nav flex-column">
+              <li className="nav-item">
+                <a className="nav-link" href="#">Today's Deal</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">Customer Service</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">Registry</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">Gift Cards</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">Sell</a>
+              </li>
+              <li className="nav-item">
+                <Link to="/merchant" className="nav-link">Merchant</Link>
+              </li>
+            </ul>
+          </Offcanvas.Body>
+        </Offcanvas>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
