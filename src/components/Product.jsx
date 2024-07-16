@@ -21,8 +21,12 @@ const Product = ({ onAddToCart, cartCount }) => {
   };
 
   const handleAddToCart = () => {
-    onAddToCart(quantity);
-    alert(`Added ${quantity} items to cart`);
+    if (typeof onAddToCart === 'function') {
+      onAddToCart(quantity);
+      alert(`Added ${quantity} items to cart`);
+    } else {
+      console.error('onAddToCart is not a function');
+    }
   };
 
   return (
