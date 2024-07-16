@@ -41,7 +41,7 @@ const MerchantSignup = () => {
           <div className="col-lg-5">
             <div className="card shadow-sm rounded-lg border-0">
               <div className="card-body">
-                <img className="mx-auto d-block mb-4" src={amazonLogo} alt="Amazon Merchant Logo" width="72" height="57" />
+                <img className="mx-auto d-block mb-4 img-fluid" src={amazonLogo} alt="Amazon Merchant Logo" style={{ maxWidth: '150px', height: 'auto' }} />
                 <h1 className="h3 mb-3 fw-normal text-center">Amazon Merchant Sign Up</h1>
 
                 <form>
