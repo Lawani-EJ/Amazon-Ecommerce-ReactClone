@@ -65,6 +65,11 @@ Custom styles are defined in separate CSS files to override Bootstrap defaults a
 - Bootstrap Icons: Icon library for Bootstrap.
 - Font Awesome: Icon toolkit.
 
+# Screenshots:
+
+![image](.src/assets/screenshots/Screenshot (82).png)
+
+
 # Future Enhancements 🛠️
 - User Authentication: Implement full login, signup, and profile management functionalities.
 - Backend Integration: Connect to a backend service for real-time data and user interactions.
