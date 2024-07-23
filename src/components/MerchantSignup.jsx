@@ -1,41 +1,11 @@
 import React from 'react';
 import amazonLogo from '../assets/images.png';
+import Header from './Header';
 
 const MerchantSignup = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#232f3e' }}>
-        <div className="container">
-          <a className="navbar-brand" href="#">
-            <i className="bi bi-list me-2"></i>
-            <span>Amazon Merchant</span>
-          </a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Explore</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Sell</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Support</a>
-              </li>
-            </ul>
-            <form className="d-flex">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button className="btn btn-outline-light" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-
+      <Header/>
       <main className="container py-5">
         <div className="row g-0 justify-content-center">
           <div className="col-lg-5">
