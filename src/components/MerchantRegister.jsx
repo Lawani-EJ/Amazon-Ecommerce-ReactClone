@@ -37,7 +37,8 @@ const MerchantRegister = () => {
     axios.post('http://ecommerce.reworkstaging.name.ng/v2/merchants', data)
       .then(response => {
         console.log(response.data);
-        navigate('./MerchantSignUp');
+        const merchantId = response.data.merchant_id; 
+        navigate(`/merchant-dashboard/${merchantId}`);
       })
       .catch(error => {
         console.error(error);
@@ -143,7 +144,7 @@ const MerchantRegister = () => {
 
       <footer className="footer mt-auto py-3 bg-light text-center">
         <div className="container">
-          <span className="text-muted">© 2017–2024 Amazon Merchant. All rights reserved.</span>
+          <span className="text-muted">&copy; 2024 Amazon Merchant. All rights reserved.</span>
         </div>
       </footer>
     </div>
