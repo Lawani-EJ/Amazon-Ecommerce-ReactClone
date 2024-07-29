@@ -67,7 +67,7 @@ Custom styles are defined in separate CSS files to override Bootstrap defaults a
 
 # Screenshots:
 
-![image](.src/assets/screenshots/Screenshot (82).png)
+
 
 
 # Future Enhancements 🛠️
