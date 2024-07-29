@@ -43,7 +43,7 @@ const Merchant = () => {
             <h1 className="display-4 fw-bold lh-1 text-body-emphasis">Your Gateway to Success</h1>
             <p className="lead">Empower your business with Amazon's robust platform. Expand your reach, engage with customers, and watch your sales soar.</p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-              <Link to="/merchantsignup" className="btn btn-warning btn-lg px-4 me-md-2 fw-bold">Start Selling</Link>
+              <Link to="/merchantregister" className="btn btn-warning btn-lg px-4 me-md-2 fw-bold">Start Selling</Link>
               <button type="button" className="btn btn-outline-secondary btn-lg px-4">Learn More</button>
             </div>
           </div>
