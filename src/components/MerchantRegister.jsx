@@ -98,11 +98,11 @@ const MerchantRegister = () => {
                   </div>
                   <div className="mb-3">
                     <label htmlFor="email" className="form-label">Email address</label>
-                    <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="name@example.com" required />
+                    <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} required />
                   </div>
                   <div className="mb-3">
-                    <label htmlFor="phone" className="form-label">Phone</label>
-                    <input type="text" className="form-control" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
+                    <label htmlFor="phone" className="form-label">Phone Number</label>
+                    <input type="tel" className="form-control" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
                   </div>
                   <div className="mb-3">
                     <label htmlFor="store_name" className="form-label">Store Name</label>
@@ -110,43 +110,31 @@ const MerchantRegister = () => {
                   </div>
                   <div className="mb-3">
                     <label htmlFor="descp" className="form-label">Description</label>
-                    <textarea className="form-control" id="descp" name="descp" value={formData.descp} onChange={handleChange} required></textarea>
+                    <textarea className="form-control" id="descp" name="descp" rows="3" value={formData.descp} onChange={handleChange}></textarea>
                   </div>
                   <div className="mb-3">
-                    <label htmlFor="icon" className="form-label">Icon</label>
-                    <input type="text" className="form-control" id="icon" name="icon" value={formData.icon} onChange={handleChange} />
+                    <label htmlFor="icon" className="form-label">Icon URL</label>
+                    <input type="url" className="form-control" id="icon" name="icon" value={formData.icon} onChange={handleChange} />
                   </div>
                   <div className="mb-3">
-                    <label htmlFor="banner" className="form-label">Banner</label>
-                    <input type="text" className="form-control" id="banner" name="banner" value={formData.banner} onChange={handleChange} />
+                    <label htmlFor="banner" className="form-label">Banner URL</label>
+                    <input type="url" className="form-control" id="banner" name="banner" value={formData.banner} onChange={handleChange} />
                   </div>
                   <div className="mb-3">
-                    <label htmlFor="phones" className="form-label">Additional Phones (comma separated)</label>
-                    <input type="text" className="form-control" id="phones" name="phones" value={formData.phones} onChange={handleChange} required />
+                    <label htmlFor="phones" className="form-label">Other Phone Numbers (comma-separated)</label>
+                    <input type="text" className="form-control" id="phones" name="phones" value={formData.phones} onChange={handleChange} />
                   </div>
                   <div className="mb-3">
                     <label htmlFor="password" className="form-label">Password</label>
                     <input type="password" className="form-control" id="password" name="password" value={formData.password} onChange={handleChange} required />
                   </div>
-                  <div className="form-check mb-3">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                    <label className="form-check-label" htmlFor="flexCheckDefault">
-                      Remember me
-                    </label>
-                  </div>
-                  <button type="submit" className="btn btn-primary w-100 py-2">Sign up</button>
+                  <button type="submit" className="btn btn-warning w-100">Sign Up</button>
                 </form>
               </div>
             </div>
           </div>
         </div>
       </main>
-
-      <footer className="footer mt-auto py-3 bg-light text-center">
-        <div className="container">
-          <span className="text-muted">&copy; 2024 Amazon Merchant. All rights reserved.</span>
-        </div>
-      </footer>
     </div>
   );
 };
