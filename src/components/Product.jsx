@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import product1 from '../assets/slider1.jpg';
+import axios from 'axios';
 import '../css/product.css';
 import Header from './Header';
 import Navbar from './Navbar';
@@ -9,6 +9,13 @@ import Footer from './Footer';
 const Product = ({ onAddToCart, cartCount }) => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    axios.get(`https://fakestoreapi.com/products/${id}`)
+      .then(res => setProduct(res.data))
+      .catch(error => console.log(error));
+  }, [id]);
 
   const handleAddQuantity = () => {
     setQuantity(quantity + 1);
@@ -29,6 +36,10 @@ const Product = ({ onAddToCart, cartCount }) => {
     }
   };
 
+  if (!product) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       <Header cartCount={cartCount} />
@@ -39,17 +50,17 @@ const Product = ({ onAddToCart, cartCount }) => {
             <div className="item-image-parent">
               <div className="item-list-vertical d-flex flex-column">
                 <div className="thumb-box mb-2">
-                  <img src={product1} alt="thumbnail" className="img-thumbnail" />
+                  <img src={product.image} alt="thumbnail" className="img-thumbnail" />
                 </div>
                 <div className="thumb-box mb-2">
-                  <img src={product1} alt="thumbnail" className="img-thumbnail" />
+                  <img src={product.image} alt="thumbnail" className="img-thumbnail" />
                 </div>
                 <div className="thumb-box mb-2">
-                  <img src={product1} alt="thumbnail" className="img-thumbnail" />
+                  <img src={product.image} alt="thumbnail" className="img-thumbnail" />
                 </div>
               </div>
               <div className="item-image-main">
-                <img src={product1} alt="default" className="img-fluid" />
+                <img src={product.image} alt="default" className="img-fluid" />
               </div>
             </div>
           </div>
@@ -57,24 +68,24 @@ const Product = ({ onAddToCart, cartCount }) => {
           <div className="col-md-6">
             <div className="item-info-parent">
               <div className="main-info">
-                <h4>Gaming Headset for PS4, PS5, PC, Xbox One, Over-Ear Gaming Headphones with Noise Cancelling Mic, Premium Stereo, Lightweight Comfortable Earmuffs for Switch Laptop Mobile, Red (GM-1)</h4>
+                <h4>{product.title}</h4>
                 <div className="star-rating">
                   <span>★★★★</span>★
                 </div>
-                <p>Price: <span id="price">$ 449.00</span></p>
+                <p>Price: <span id="price">{product.price}</span></p>
               </div>
               <div className="select-items">
                 <div className="change-color mb-3">
                   <label><b>Colour:</b> Black</label><br />
                   <div className="d-flex">
                     <div className="thumb-box mr-2">
-                      <img src={product1} alt="thumbnail" className="img-thumbnail" />
+                      <img src={product.image} alt="thumbnail" className="img-thumbnail" />
                     </div>
                     <div className="thumb-box mr-2">
-                      <img src={product1} alt="thumbnail" className="img-thumbnail" />
+                      <img src={product.image} alt="thumbnail" className="img-thumbnail" />
                     </div>
                     <div className="thumb-box">
-                      <img src={product1} alt="thumbnail" className="img-thumbnail" />
+                      <img src={product.image} alt="thumbnail" className="img-thumbnail" />
                     </div>
                   </div>
                 </div>
