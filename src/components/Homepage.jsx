@@ -5,6 +5,7 @@ import Carousel from './Carousel';
 import Cards from './Cards';
 import ShopItemsSlider from './Sliders';
 import Footer from './Footer';
+import Cards2 from './Cards2';
 
 const Homepage = ({ cartCount }) => {
   return (
@@ -13,6 +14,8 @@ const Homepage = ({ cartCount }) => {
       <Navbar />
       <Carousel />
       <Cards />
+      <ShopItemsSlider />
+      <Cards2 />
       <ShopItemsSlider />
       <Footer />
     </div>
