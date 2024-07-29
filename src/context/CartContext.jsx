@@ -16,3 +16,11 @@
 //     </CartContext.Provider>
 //   );
 // };
+
+import { createContext, useState, useEffect, Children } from 'react'
+
+export const CartContext = createContext();
+
+export const GlobalProvider = ({ Children }) => {
+    
+}
