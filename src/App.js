@@ -9,7 +9,7 @@ import Merchant from './components/Merchant';
 import MerchantSignup from './components/MerchantSignup';
 import MerchantRegister from './components/MerchantRegister';
 import MerchantDashboard from './components/MerchantDashboard';
-import Category from './components/Category';
+import Category from './components/CategoryForm';
 
 const App = () => {
   const [cartCount, setCartCount] = useState(0);
